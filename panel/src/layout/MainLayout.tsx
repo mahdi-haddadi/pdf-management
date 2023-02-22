@@ -6,13 +6,9 @@ import useToggle from "../hooks/useToggle";
 import Container from "../components/container/Container";
 
 const Main = lazy(() => import("./../screens/main/Main"));
-const AddAdmin = lazy(() => import("../screens/manageAdmin/AddAdmin"));
-const Admins = lazy(() => import("../screens/manageAdmin/Admins"));
-const Pages = lazy(() => import("../screens/pages/Pages"));
-const AddNewPages = lazy(() => import("../screens/pages/AddNewPage"));
-const Blogs = lazy(() => import("../screens/blogs/Blogs"));
-const AddNewBlog = lazy(() => import("../screens/blogs/AddNewBlog"));
-const Chats = lazy(() => import("../screens/chat/Chat"));
+const SinglePdf = lazy(() => import("../screens/singlePdf/SinglePdf"));
+const NewDocument = lazy(() => import("../screens/newDocument/NewDocument"));
+const UpdateDocument = lazy(() => import("../screens/updateDocument"));
 const NotFound = lazy(() => import("../screens/404/NotFound"));
 
 const MainLayout = () => {
@@ -34,19 +30,10 @@ const MainLayout = () => {
       <Sidebar />
       <Container>
         <Routes>
-          {/* main */}
           <Route path="/" element={<Main />} />
-          {/* admin */}
-          <Route path="/admins" element={<Admins />} />
-          <Route path="/add-admin" element={<AddAdmin />} />
-          {/* page */}
-          <Route path="/pages" element={<Pages />} />
-          <Route path="/add-new-page" element={<AddNewPages />} />
-          {/* blog */}
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/add-new-blog" element={<AddNewBlog />} />
-          {/* chat */}
-          <Route path="/chats" element={<Chats />} />
+          <Route path="/new-document" element={<NewDocument />} />
+          <Route path="/single/:id" element={<SinglePdf />} />
+          <Route path="/update-document/:id" element={<UpdateDocument />} />
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>

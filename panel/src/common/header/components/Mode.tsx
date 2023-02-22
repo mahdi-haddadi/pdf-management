@@ -38,8 +38,8 @@ const Mode = () => {
   return (
     <Fragment>
       <MenuCore>
-        <Button color="link" className="mx-2 cursor-pointer" rounded={true}>
-          <BsFillMoonStarsFill size={"1.4rem"} color={"#626477"} />
+        <Button color="link" className="mx-1 cursor-pointer px-4 py-3" rounded={true}>
+          <BsFillMoonStarsFill size={"1rem"} color={"#626477"} />
         </Button>
         <Menu id="mode">
           {data.map((i) => {

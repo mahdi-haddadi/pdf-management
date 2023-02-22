@@ -12,7 +12,7 @@ const Paper: FC<Props> = ({ children, className, style }) => {
       style={style}
       className={classNames(
         className,
-        `paper opacity-100 transition-opacity bg-white text-black overflow-hidden min-w-[32px] min-h-[32px] max-w-xs rounded-lg shadow-lg inline-block`
+        `paper opacity-100 transition-opacity bg-bg-default text-text-secondary overflow-hidden min-w-[32px] min-h-[32px] rounded-lg shadow-lg inline-block`
       )}
     >
       {children}

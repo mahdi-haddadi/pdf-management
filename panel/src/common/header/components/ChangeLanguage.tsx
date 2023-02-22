@@ -36,8 +36,8 @@ const ChangeLanguage = () => {
   return (
     <Fragment>
       <MenuCore>
-        <Button color="link" className="mx-2 cursor-pointer" rounded={true}>
-          <AiOutlineGlobal size={"1.4rem"} color={"#626477"} />
+        <Button color="link" className="mx-1 cursor-pointer px-4 py-3" rounded={true}>
+          <AiOutlineGlobal size={"1rem"} color={"#626477"} />
         </Button>
         <Menu id="change-language">
           {data.map((i) => {

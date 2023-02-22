@@ -27,7 +27,7 @@ export const sidebarData = [
         title_en: "New PDF",
         icon: <AiTwotoneFilePdf />,
         sub: null,
-        to: "/new-file",
+        to: "/new-document",
       },
     ],
   },

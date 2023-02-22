@@ -59,7 +59,7 @@ const Dialog = ({
     if (freeze) {
       freezeScreen(open);
     }
-  }, [freeze,open]);
+  }, [freeze, open]);
 
   return (
     <Fragment>
@@ -73,7 +73,7 @@ const Dialog = ({
               ref={refDialog}
               className={classNames(
                 className,
-                "dialog-box h-auto z-50 text-zinc-100 bg-slate-800 shadow-lg rounded-lg opacity-100"
+                "dialog-box h-auto z-50 bg-bg-default shadow-lg rounded-lg opacity-100"
               )}
               style={{
                 ...style,
@@ -100,7 +100,10 @@ const Header: FC<IChildComponent> = ({
 }) => {
   return (
     <div
-      className={classNames(className, "dialog-header")}
+      className={classNames(
+        className,
+        "dialog-header bg-bg-default text-text-primary"
+      )}
       style={{ ...style }}
       {...rest}
     >
@@ -113,7 +116,10 @@ Dialog.Header = Header;
 
 const Body: FC<IChildComponent> = ({ children, className, style }) => {
   return (
-    <div className={classNames(className, "dialog-body")} style={{ ...style }}>
+    <div
+      className={classNames(className, "dialog-body text-text-primary")}
+      style={{ ...style }}
+    >
       {children}
     </div>
   );
@@ -124,7 +130,7 @@ Dialog.Body = Body;
 const Footer: FC<IChildComponent> = ({ children, className, style }) => {
   return (
     <div
-      className={classNames(className, "dialog-footer bg-slate-900")}
+      className={classNames(className, "dialog-footer bg-bg-default")}
       style={{ ...style }}
     >
       {children}

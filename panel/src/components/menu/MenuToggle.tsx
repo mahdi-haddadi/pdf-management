@@ -1,11 +1,19 @@
-import { FC, ReactNode } from "react";
+import { cloneElement, FC, PropsWithChildren, ReactNode } from "react";
 
 interface Props {
-  children: ReactNode;
+  children: any;
   handleClick?: () => void;
+  className?: string;
 }
-const MenuToggle: FC<Props> = ({ children, handleClick }) => {
-  return <span onClick={handleClick}>{children}</span>;
+const MenuToggle: FC<Props> = ({ children, handleClick, className }) => {
+  return (
+    <span className={className}>
+      {cloneElement(children, {
+        onClick: handleClick,
+        ...children.props,
+      })}
+    </span>
+  );
 };
 
 export default MenuToggle;

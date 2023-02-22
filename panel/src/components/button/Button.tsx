@@ -82,8 +82,8 @@ const Button: FC<Props> = ({
       type={type}
       className={classNames(
         typesBtn[color],
-        "inline-block border-2 px-6 py-2.5 font-medium text-xs leading-tight rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out",
         className,
+        "inline-block border-2 px-2.5 py-2.5 font-medium text-xs leading-tight rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out",
         { "rounded-full": rounded, "pointer-events-none opacity-60": disable }
       )}
       style={{ ...style }}

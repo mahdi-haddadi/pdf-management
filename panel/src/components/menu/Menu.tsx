@@ -75,7 +75,7 @@ const Menu: FC<Props> = ({
         ref={refCloseMenu}
         className={classNames("menu fixed z-50", className)}
       >
-        <ul className="bg-white rounded-lg border border-gray-200 w-full text-gray-900">
+        <ul className="bg-bg-paper border-x-2 border-y-2 text-text-primary w-full">
           {childNode}
         </ul>
       </div>

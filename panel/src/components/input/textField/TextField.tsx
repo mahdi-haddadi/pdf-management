@@ -39,21 +39,23 @@ const TextField: FC<Props> = ({
   ...input
 }) => {
   return (
-    <div className="mb-3 xl:w-96 relative">
-      <label
-        htmlFor={id}
-        style={label?.style}
-        className={classNames(
-          label?.className,
-          "form-label inline-block mb-2 text-gray-700 text-xl",
-          {
-            "text-xl": size === "lg",
-            "text-sm": size === "sm",
-          }
-        )}
-      >
-        {label?.text}
-      </label>
+    <div className="relative">
+      {label && (
+        <label
+          htmlFor={id}
+          style={label?.style}
+          className={classNames(
+            label?.className,
+            "form-label inline-block mb-2 text-gray-700 text-xl",
+            {
+              "text-xl": size === "lg",
+              "text-sm": size === "sm",
+            }
+          )}
+        >
+          {label?.text}
+        </label>
+      )}
       <div className={classNames("relative")}>
         <TextFieldCore
           classNameInput={classNameInput}

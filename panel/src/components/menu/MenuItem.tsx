@@ -27,11 +27,11 @@ const MenuItem: FC<Props> = ({
       }}
       className={classNames(
         className,
-        "px-4 py-1 border-b border-gray-200 w-full rounded-lg select-none cursor-pointer",
+        "px-4 py-2 border-b border-gray-200 w-full select-none cursor-pointer",
         {
           "bg-blue-600 text-white": active,
           "text-gray-400 cursor-default": disabled,
-          "hover:bg-gray-100 hover:text-gray-500 transition duration-500 cursor-pointer":
+          "hover:bg-bg-default transition duration-100 cursor-pointer":
             !disabled && !active,
         }
       )}

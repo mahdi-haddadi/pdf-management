@@ -35,6 +35,12 @@ module.exports = {
           dark: "var(--color-dark-secondary)",
         },
       },
+      borderColor: {
+        custom: {
+          default: "var(--bg-default)",
+          paper: "var(--bg-paper)",
+        },
+      },
     },
     backgroundColor: (theme) => ({
       ...theme("colors"),
